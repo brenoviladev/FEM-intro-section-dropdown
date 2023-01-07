@@ -1,0 +1,45 @@
+/* mb = Mobile | dt = Desktop */
+
+.nav {
+	display: flex;
+	margin: 1.5rem 1rem;
+}
+
+.nav__logo {
+	margin-right: auto;
+}
+
+.nav-dtMenu__container {
+	display: none;
+}
+
+.nav-mbMenu {
+	position: absolute;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	right: 0;
+	top: 0;
+}
+
+.nav-mbMenu__darkBg {
+	width: 35vw;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 800px) {
+	.nav-mbMenu__container,
+	.nav-mbMenu__openMenu {
+		display: none;
+	}
+
+	.nav {
+		align-items: center;
+		margin-inline: 2.5rem;
+	}
+
+	.nav-dtMenu__container {
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,136 @@
+.menu {
+	width: 65vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 1.5rem 1rem 0 1.5rem;
+	background-color: var(--almost-white);
+}
+
+.menu li {
+	margin-block: 1.5rem;
+}
+
+.menu__closeMenu {
+	align-self: flex-end;
+}
+
+.menu-links {
+	align-self: flex-start;
+}
+
+.menu-links__features,
+.menu-links__company {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.dropdown {
+	margin: 1.75rem 0 2.25rem 1.4rem;
+}
+
+.features-dropdown li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.features-dropdown li img {
+	width: 16px;
+}
+
+.menu-auth {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-size: 0.9rem;
+	margin-top: 1rem;
+	gap: 1rem;
+}
+
+.menu-auth__register {
+	width: 95%;
+	text-align: center;
+	border: 2px var(--medium-gray) solid;
+	padding: 12px 0;
+	border-radius: 12px;
+}
+
+.menu li:hover,
+.menu-auth > *:hover {
+	color: var(--almost-black);
+	cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+	.menu__closeMenu {
+		display: none;
+	}
+
+	.menu,
+	.menu * {
+		flex-direction: row;
+		width: auto;
+		padding: 0;
+		margin: 0;
+		gap: 0;
+	}
+
+	.menu {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.menu-links {
+		display: flex;
+		align-self: center;
+		margin-left: 4rem;
+		gap: 1.5rem;
+	}
+
+	.menu-links li {
+		margin: 0;
+	}
+
+	.menu-links__features,
+	.menu-links__company {
+		gap: 0.5rem;
+	}
+
+	.dropdown {
+		position: absolute;
+		margin-top: 2rem;
+		padding: 1rem;
+		background-color: #fff;
+		border-radius: 12px;
+
+		box-shadow: 0px 0.6px 2px -5px rgba(0, 0, 0, 0.025),
+			0px 1.3px 4.9px -5px rgba(0, 0, 0, 0.036),
+			0px 2.5px 9.3px -5px rgba(0, 0, 0, 0.045),
+			0px 4.5px 16.5px -5px rgba(0, 0, 0, 0.054),
+			0px 8.4px 30.9px -5px rgba(0, 0, 0, 0.065),
+			0px 20px 74px -5px rgba(0, 0, 0, 0.09);
+	}
+
+	.dropdown > * {
+		padding: 0.45rem;
+	}
+
+	.features-dropdown {
+		left: 7.25rem;
+	}
+
+	.company-dropdown {
+		margin-left: 7.5rem;
+	}
+
+	.menu-auth {
+		gap: 2rem;
+	}
+
+	.menu-auth__register {
+		padding: 12px 24px;
+	}
+}
